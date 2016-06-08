@@ -8,6 +8,23 @@
 # You'll probably want to write other methods, but this
 # encapsulates the core Aunty logic
 def deaf_aunty
+	puts "Hi Sandra"
+	counter = 0 
+	until counter == 2
+		answer = gets.chomp 
+		if answer == "" 
+			counter += 1 
+		elsif answer == answer.upcase 
+			puts "HUH! SPEAK UP, SANDRA"
+			counter = 0 
+		elsif answer == answer.downcase 
+			puts "WE CANT DO THAT"
+			counter = 0 
+		elsif answer == "I love you grandma"
+			puts "Thank you, come again"
+		end 
+	end 
+	puts "Are you there? You have left"
 end
 
 # Run our method
