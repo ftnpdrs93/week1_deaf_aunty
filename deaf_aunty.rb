@@ -9,17 +9,21 @@
 # encapsulates the core Aunty logic
 def deaf_aunty
 	puts "Hi Sandra"
+	answer = gets.chomp.to_s
 	counter = 0 
 	until counter == 2
 		answer = gets.chomp 
 		if answer == "" 
 			counter += 1 
+			
 		elsif answer == answer.upcase 
-			puts "HUH! SPEAK UP, SANDRA"
-			counter = 0 
-		elsif answer == answer.downcase 
 			puts "WE CANT DO THAT"
 			counter = 0 
+			
+		elsif answer == answer.downcase 
+			puts "HUH! SPEAK UP, SANDRA"
+			counter = 0 
+		
 		elsif answer == "I love you grandma"
 			puts "Thank you, come again"
 		end 
